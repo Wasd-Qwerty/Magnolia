@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?include_once 'connect.php';
+$s = "sd";
+$typeCache = R::findOne('typeofproduct', 'value = ?', array($_GET['type'])); 
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -8,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/product.css">
-    <title>Парфюмерия</title>
+    <title><?=$typeCache['name']?></title>
 </head>
 <body>
     <header>
@@ -43,7 +46,6 @@
     </header>
 
 <?
-    include_once 'connect.php';
     $products = R::findAll('catalog', 'type = ?', array($_GET['type']));
 
     foreach($products as $product):?>
@@ -54,7 +56,7 @@
                     <h1 class="card-text text-center"><?=$product['name']?></h1>
                     <p class="card-text text-center"><?=$product['description']?></p>
                     <h3><p class="price text-center"><?=$product['price']?></p></h3>
-                    <a href="#" class="btn">Добавить в корзину</a>
+                    <a href="addToTrash.php?id=<?=$product['id']?>" class="btn">Добавить в корзину</a>
                 </div>
             </div>
         </div>

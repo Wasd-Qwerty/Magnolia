@@ -29,9 +29,13 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-link" href="#">КОРЗИНА</a>
+                                    <a class="nav-link" href="trash.php">КОРЗИНА</a>
                                     <a class="nav-link" href="about.html">О НАС</a>
                                     <a class="nav-link" href="katalog.html">КАТАЛОГ</a>
+                                    <?if (isset($_SESSION['logged_user']) && $_SESSION['logged_user']['access_level'] > 0):
+                                    ?>
+                                    <a class="nav-link" href="adminka.php">АДМИНКА</a>
+                                <? endif; ?>
                                 </div>
                             </div>
                             <? if(empty($_SESSION['logged_user'])):?>

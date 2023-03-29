@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\addcatalog.css">
     <title>Admin Panel Add Catalog</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../css/product.css">
 </head>
-<body>
+<body style="text-align: center;">
     <?php
-        require 'connect.php';
+        include_once 'connect.php';
         if(isset($_POST['add'])){
             $data = $_POST;
             $errors = array();
@@ -34,19 +36,21 @@
                 $product -> url = $data['url'];
                 $product -> type = $data['type'];
                 R::store($product);
-                echo '<div class="success">Успешно</div>';
+                header('Location: adminka.php');
             }
             else{
                 echo '<div class="errors" style="color:red; text-align: center;">' . array_shift($errors) . '</div>';
             }
         }
-        if (false):
+        if (empty($_SESSION['logged_user']) || $_SESSION['logged_user']['access_level'] == 0):
         ?>
-            <h1>У вас нет доступа к данной странице</h1>
+            <div class="zagolovok">
+                <h1>У вас нет доступа к данной странице</h1>
+            </div>
         <? else: ?>
     <nav>
     </nav>  
-    <form class="form" method="post" action="" style="text-align: center;">
+    <form class="form" method="post" >
         <p>Введите название товара</p>
         <input value="<?=$product['name']?>" type="text" class="inputbox" name="name">
         <p>Введите цену товара</p>
