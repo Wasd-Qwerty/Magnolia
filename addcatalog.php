@@ -5,20 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\addcatalog.css">
-    <title>Admin Panel Edit Catalog</title>
+    <title>Admin Panel Add Catalog</title>
 </head>
 <body>
     <?php
         require 'connect.php';
-        $data = $_POST;
-        $id = $_GET['id']; 
-        $product = R::load('catalog', $id);
-
-        if(isset($data['delete'])){
-            R::trash($product);
-            echo '<h2>Товар удален. <a href="adminpanel.php">Вернуться назад.</a></h2>';
-        }
-        if(isset($data['edit'])){
+        if(isset($_POST['add'])){
+            $data = $_POST;
             $errors = array();
             if(trim($data['name'] == '')){
                 $errors[] = 'Введите название товара!';
@@ -32,11 +25,9 @@
             if(trim($data['url'] == '')){
                 $errors[] = 'Введите ссылку на картинку!';
             }
-            if(trim($data['type'] == '')){
-                $errors[] = 'Введите вид товара!';
-            }
-           
+            
             if(empty($errors)){
+                $product = R::dispense('catalog');
                 $product -> name = $data['name'];
                 $product -> price = $data['price'];
                 $product -> description = $data['description'];
@@ -68,20 +59,14 @@
             Выберите вид товара: <br>
             <select name="type">
                 <? 
-                    $types = R::findAll('typeofproduct');
-                    foreach($types as $type){
-                        if ($type['value'] = $product['type']): ?>
-                            <option value="<?=$type['value']?>" selected><?=$type['name']?></option>
-                        
-                        <?else:?>
-                            <option value="<?=$type['value']?>"><?=$type['name']?></option>
-                        <?endif;
-                    }
+                     $types = R::findAll('typeofproduct');
+                     foreach($types as $type):?>
+                        <option value="<?=$type['value']?>"><?=$type['name']?></option>
+                     <?endforeach;
                 ?>
             </select>
         </p>
-        <button type="submit" name="edit" class="button">Подтвердить</button>
-        <button type="submit" name="delete" class="button">Удалить</button>
+        <button type="submit" name="add" class="button">Добавить</button>
     </form>
 <? endif; ?>
 </body>
