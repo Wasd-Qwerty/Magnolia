@@ -10,8 +10,8 @@
         $trashproduct -> user_id = $_SESSION['logged_user']['id'];
         $trashproduct -> product_id = $_GET['id'];
         R::store($trashproduct);
-        $product = R::findOne('catalog, id = ?', $_GET['id']);
 
-        header('Location: katalog.html?type='.$product['type']);
+
+        header('Location: katalog.html');
     }
     
