@@ -29,8 +29,8 @@
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                     <a class="nav-link" href="#">КОРЗИНА</a>
-                                    <a class="nav-link" href="#">О НАС</a>
-                                    <a class="nav-link" href="#">КАТАЛОГ</a>
+                                    <a class="nav-link" href="about.html">О НАС</a>
+                                    <a class="nav-link" href="katalog.html">КАТАЛОГ</a>
                                 </div>
                             </div>
                             <a class="navbar-brand" class="auth" href="#">
