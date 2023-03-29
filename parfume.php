@@ -42,33 +42,20 @@
             </div>
         </header>
 
+
         <div class="cards">
-        <div class="card" style="width: 18rem;">
-          <img src="https://goldapple.ru/media/catalog/product/cache/7c72a742678f135337f3d39eb3099e35/8/8/8809546843568_1_mqeh0p5jtlxydu4n.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h1 class="card-text text-center">Помада</h1>
-            <p class="card-text text-center">Небольшой пример текста, который будет основываться на заголовке карты и составлять основную часть содержимого карты.</p>
-            <h3><p class="price text-center">5000Р</p></h3>
-            <a href="#" class="btn">Добавить в корзину</a>
-          </div>
-        </div>
-        </div>
-
-        <section>
-                <div class="container-fluid">
-                    <div class="row">
-                        <footer class="bg-light text-center text-lg-start">
-
-                            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                                © 2023 Copyright:
-                                <a class="text-dark" href="index.html">Magnolia.com</a>
-                            </div>
-
-                        </footer>
-                    </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://goldapple.ru/media/catalog/product/cache/7c72a742678f135337f3d39eb3099e35/8/8/8809546843568_1_mqeh0p5jtlxydu4n.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h1 class="card-text text-center">Помада</h1>
+                    <p class="card-text text-center">Небольшой пример текста, который будет основываться на заголовке карты и составлять основную часть содержимого карты.</p>
+                    <h3><p class="price text-center">5000Р</p></h3>
+                    <a href="#" class="btn">Добавить в корзину</a>
                 </div>
+            </div>
+        </div>
 
-            </section>
+
 
 
 </body>

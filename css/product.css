@@ -6,7 +6,7 @@
     max-width: 1000px; /* Ширина grid-контейнера */
     justify-content: center;
     justify-items: center; /* Размещаем карточку по центру */
-    column-gap: 30px; /* Отступ между колонками */
+    column-gap: 100px; /* Отступ между колонками */
     row-gap: 40px; /* Отступ между рядами */
     margin: 0 auto;
 }
