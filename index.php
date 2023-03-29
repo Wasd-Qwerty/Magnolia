@@ -1,3 +1,4 @@
+<? include_once 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +34,15 @@
                                     <a class="nav-link" href="katalog.html">КАТАЛОГ</a>
                                 </div>
                             </div>
-                            <a class="navbar-brand" class="auth" href="#">
+                            <? if(empty($_SESSION['logged_user'])):?>
+                            <a class="navbar-brand" class="auth" href="auth/signUp.php">
                                 <img src="image/auth.png" alt="" width="45" height="45">
                             </a>
+                            <? else:?>
+                            <a class="navbar-brand" class="auth" href="auth/logOut.php">
+                                <img src="image/logOut.png" alt="" width="45" height="45">
+                            </a>
+                            <?endif;?>
                         </div>
                     </nav>
                 </div>
