@@ -1,121 +1,33 @@
-.wrappers {
-    position: absolute;
-    top: 300px;
+.cards {
+    display: grid;
+    /* Автоматически заполняем на всю ширину grid-контейнера */
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; /* Ширина grid-контейнера */
+    justify-content: center;
+    justify-items: center; /* Размещаем карточку по центру */
+    column-gap: 30px; /* Отступ между колонками */
+    row-gap: 40px; /* Отступ между рядами */
+    margin: 0 auto;
 }
 
-.wrapper {
+.btn {
     display: block;
     width: 100%;
-    float: left;
-    transition: width .2s;
-    height: 420px;
-    width: 654px;
-    margin: 40px 40px;
-    border-radius: 7px 7px 7px 7px;
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-}
-
-.product-img {
-    top: 20px;
-    float: left;
-    height: 420px;
-    width: 327px;
-}
-
-.product-img img {
-    width: 327px;
-    height: 420px;
-    border-radius: 7px 0 0 7px;
-}
-
-.product-info {
-    font-family: 'Ubuntu';
-    float: left;
-    height: 420px;
-    width: 327px;
-    border-radius: 0 7px 10px 7px;
-    background-color: #ffffff;
-}
-
-.product-text {
-    height: 175px;
-    width: 327px;
-}
-
-.product-text h1 {
-    font-family: 'Ubuntu';
-    padding-top: 52px;
-    font-size: 34px;
-    color: black;
-    text-align: center;
-}
-
-.product-text h1,
-.product-price-btn p {
-    font-family: 'Ubuntu', 'Lora';
-}
-
-.product-text p {
-    height: 75px;
-    margin: 0 0 0 38px;
-    font-family: 'Lora', serif;
-    color: #8d8d8d;
-    line-height: 1.7em;
-    font-size: 14px;
-    font-weight: lighter;
-    overflow: hidden;
-}
-
-.product-price-btn {
-    height: 103px;
-    width: 327px;
-    margin-top: 17px;
-    position: relative;
-}
-
-.product-price-btn p {
-    display: inline-block;
-    position: absolute;
-    top: -13px;
-    height: 50px;
-    font-family: 'Lora', serif;
-    margin: 0 0 0 110px;
-    font-size: 28px;
-    font-weight: lighter;
-    color: black;
-}
-
-span {
-    display: inline-block;
-    height: 50px;
-    top: 10px;
-    font-family: 'Lora', serif;
-    font-size: 40px;
-}
-
-.product-price-btn button {
-    float: right;
-    display: inline-block;
-    height: 65px;
-    width: 196px;
-    margin: 95px 60px 0 16px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #ffffff;
-    background-color: black;
-    cursor: pointer;
-    outline: none;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.2s;
+    margin-top: auto; /* Прижимаем кнопку к низу карточки */
 }
 
-.product-price-btn button:hover {
-    background-color: #AFAFAF;
-    color: black;
+.btn:hover {
+    border: 1px solid green;
+    background-color: green;
+    color: #fff;
 }

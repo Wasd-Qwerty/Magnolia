@@ -18,7 +18,7 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="index.php">
                                 <img src="image/logo.jpg" alt="" width="70" height="70">
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
