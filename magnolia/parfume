@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+            require 'connect.php';
+            // if(isset($_SESSION['logged_user'])){
+            //   echo '<div class="close"><a href="logOut.php">sign out.</a></div>';
+            // }
+            // else{
+            //   echo '<div class="close"><a href="sign in.php">sign in.</a></div>';
+            // }
+            ?>
+    <?php  
+            $products = R::findAll('parfume');
+        
+            foreach($products as $product){
+                echo '
+                <div class="wrapper">
+                <div class="product-img">
+                    <img src="'.$product['url'].'" >
+                </div>
+                <div class="product-info">
+                    <div class="product-text">
+                    <h1>'.$product['name'].'</h1>
+                    </div>
+                    <div class="product-price-btn">
+                    <p><span>'.$product['price'].'</span></p>
+                    <form action="form.php" target="_blank">
+                        <button >Купить</button>
+                    </form>
+                    </div>
+                </div>
+                </div>';
+            }
+        
+        ?>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+.card-img-overlay:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.card-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 350%;
+}
+
+.card-img-overlay {
+    text-align: center;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.car {
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+.skin {
+    text-align: center;
+}
+
+.formm {
+    text-align: center;
+}
+
+.aboutlogo {
+    text-align: center;
+}
+
+.aboutname {
+    text-align: center;
+}
+
+.katalog {
+    text-align: center;
+    font-size: 50%;
+}
+
+.vvv {
+    padding-top: 2%;
+}
+
+.registratie_form {
+    padding-top: 3%;
+    font-size: 140%;
+}
+
+.foooter {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
