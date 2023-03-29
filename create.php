@@ -1,10 +1,12 @@
 <?php
  require_once 'connect.php';
 
- $id = $_POST['id'];
- $Name = $_POST['Name'];
- $Email = $_POST['Email'];
+ $data = $_POST;
 
- mysqli_query($connect, "INSERT INTO `subscripe`(`id`, `Name`, `Email`) VALUES (NULL,'$Name','$Email')");
+ $manchik = R::dispense('subscribe');
+ $manchik -> id;
+ $manchik -> name = $data['Name'];
+ $manchik -> email = $data['Email'];
+ R::store($manchik);
 
  header('Location: index.php');
