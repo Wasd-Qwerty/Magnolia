@@ -241,8 +241,6 @@
                     <div id="register_wrapper">
                         <h1>Подпишитесь на наши рассылки</h1>
                         <form class="registratie_form" action="create.php" method="post">
-
-
                             <input type="text" id="Name" name="Name" required placeholder="Name" maxlenght='100'>
 
                             <input type="email" id="Email" name="Email" required placeholder="Email" maxlenght='100'>

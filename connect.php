@@ -1,6 +1,7 @@
 <?php
-$connect = mysqli_connect('localhost', 'root', '', 'Magnolia');
 
-if (!$connect){
-    die('у вас проблемы с подключением к БД');
-}
+require "libs/rb.php";
+
+R::setup( 'mysql:host=localhost;dbname=Magnolia','root', '' ); 
+
+session_start();
