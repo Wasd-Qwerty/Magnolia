@@ -37,15 +37,15 @@
                     <?
                 $sumPrice += $product['price'];    
             endforeach;
-            }
         }?>
+   
 </div>
     <div style="text-align: center; position:absolute; left: 50%; transform:translate(-50%, 0%)">
         <h1><?
         echo $sumPrice;
         ?> р.</h1>
-        <a href="#" style="width: 80px;" class="btn">Оплатить</a>
+        <a href="ordering.php" style="width: 120px;" class="btn">Оформить заказ</a>
     </div>
-
+<?  }?>
 </body>
 </html>

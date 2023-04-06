@@ -2,7 +2,7 @@
     include_once 'connect.php';
     $data = $_GET;
     if(empty($_SESSION['logged_user'])){
-        echo '<a href="auth/signUp.php">Авторизуйся бро</a>';
+        echo '<a href="auth/signUp.php">Авторизуйся, бро</a>';
     }
     else{
         $trashproduct = R::dispense('basket');

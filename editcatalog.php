@@ -18,7 +18,7 @@
 
         if(isset($data['delete'])){
             R::trash($product);
-            header('Location: /adminka');
+            header('Location: /adminka.php');
         }
         if(isset($data['edit'])){
             $errors = array();

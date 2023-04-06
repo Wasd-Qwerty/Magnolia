@@ -30,6 +30,7 @@
     <? else: ?>
         <a href="index.php" style="width: 80px;" class="btn">Назад</a>
         <a href="mailing.php" style="width: 80px;" class="btn">Рассылки</a>
+        <a href="orderingShow.php" style="width: 80px;" class="btn">Заказы</a>
         <a href="addcatalog.php" style="width: 80px;" class="btn">Добавить</a>
         <form method="post">
             <select name="type">
